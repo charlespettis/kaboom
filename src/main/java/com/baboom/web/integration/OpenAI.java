@@ -23,16 +23,18 @@ public class OpenAI {
 
         StructuredChatCompletionCreateParams<QuestionList> params = ChatCompletionCreateParams.builder()
         .addSystemMessage("""
-            You are generating K-8 multiple-choice questions.
+            You are generating multiple-choice questions for grade school students.
       
             Output must match the QuestionList schema.
       
             Hard rules for EVERY item:
+            - Questions MUST be tailored for the provided grade, subject, and difficulty level.
             - answers MUST contain exactly 2 DISTINCT strings
             - correctAnswer MUST exactly equal one of answers (string match)
             - correctAnswer MUST be the actually correct answer to the question
             - Do not include any additional fields
             - Do not output explanations, only the structured output
+            - Return exactly twenty (20) items
           """)
         .addUserMessage(prompt)
         .model(ChatModel.GPT_4O_MINI)

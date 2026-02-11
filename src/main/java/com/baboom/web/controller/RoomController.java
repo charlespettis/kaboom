@@ -14,7 +14,6 @@ import com.baboom.web.dto.RoomDto;
 import com.baboom.web.dto.ScoreDto;
 import com.baboom.web.service.RoomService;
 
-@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/room")
 public class RoomController {
