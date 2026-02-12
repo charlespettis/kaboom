@@ -1,4 +1,4 @@
-# KaBoom!
+# StudyBunches
 
 > A classroom tool that turns prompts into educational video games for students to play in a web browser.
 
